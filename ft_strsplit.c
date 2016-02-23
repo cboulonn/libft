@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 11:27:21 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:53:49 by cboulonn         ###   ########.fr       */
+/*   Created: 2016/02/23 16:14:25 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/02/23 16:34:24 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char **ft_strsplit(char const *s, char c)
 {
-	size_t	i;
+	char	**tab;
+	int		i;
+	int		len_s;
 
-	i = -1;
-	if (dst && src && n > 0)
-	{
-		while (*(char *)src != *((char *)c && i < n)
-		{
-			*((char *)dst + i) = *((char *)src + i);
-			i++;
-		}
-		return (&dst[i]);
-	}
-	return (NULL);
+	len_s = ft_strlen(s);
+	tab = (char **)malloc(sizeof(char *) * len_s + 1);
+
+
+
 }
+

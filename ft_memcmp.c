@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:58:33 by cboulonn          #+#    #+#             */
-/*   Updated: 2015/11/27 15:13:26 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/23 13:55:21 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (s1 != NULL && s2 != NULL)
