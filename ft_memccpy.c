@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:27:21 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:53:49 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 16:29:13 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = -1;
 	if (dst && src && n > 0)
 	{
-		while (*(char *)src != *((char *)c && i < n)
+		while (*(char *)src != c && i < n)
 		{
 			*((char *)dst + i) = *((char *)src + i);
 			i++;

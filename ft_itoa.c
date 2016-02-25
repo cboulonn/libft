@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/02/25 14:29:33 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/02/25 15:23:50 by cboulonn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int		ft_nblen(n)
+int		ft_nblen(int n)
 {
 	int		i;
 
@@ -30,7 +42,7 @@ char	*ft_itoa(int n)
 	{
 		if (n < 0)
 		{
-			value = -value;
+			n = -n;
 			value[0] = '-';
 		}
 		while (i >= 0 && i <= 9)
@@ -40,5 +52,5 @@ char	*ft_itoa(int n)
 			i++;
 		}
 	}
-	return (nb);
+	return (value);
 }

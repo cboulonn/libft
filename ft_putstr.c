@@ -6,7 +6,7 @@
 /*   By: cboulonn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/11 18:46:30 by cboulonn          #+#    #+#             */
-/*   Updated: 2015/11/28 15:06:29 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 15:15:33 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr(char const *str)
 {
-	write(1, s, ft_strlen(s));
+	write(1, str, ft_strlen(str));
 }

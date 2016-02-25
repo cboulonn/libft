@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/17 15:35:06 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:33:39 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 16:45:16 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int		ft_atoi(const char *str)
 	value = 0;
 	while (*str == ' ')
 		str++;
-
 	if (*str == '+')
 		str++;
 	else if (*str == '-')
@@ -38,4 +37,3 @@ int		ft_atoi(const char *str)
 		value = -value;
 	return (value);
 }
-

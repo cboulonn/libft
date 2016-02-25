@@ -6,20 +6,20 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/21 19:13:22 by cboulonn          #+#    #+#             */
-/*   Updated: 2015/11/26 23:27:22 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:24:57 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isprint(int c)
+int		ft_isprint(int c)
 {
-        while (c != '\0')
-        {
-                if (c >= ' ' && c <= '~')
-                        return (c);
-                else
-                        return (0);
-        }
-        return (c);
+	while (c != '\0')
+	{
+		if (c >= ' ' && c <= '~')
+			return (c);
+		else
+			return (0);
+	}
+	return (c);
 }

@@ -6,13 +6,11 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/21 15:18:10 by cboulonn          #+#    #+#             */
-/*   Updated: 2015/11/26 23:02:49 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:58:23 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <assert.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -25,14 +23,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if (i == n)
 		return (0);
 	return (s1[i] - s2[i]);
-
-}
-
-int	main(void)
-{
-assert(ft_strncmp("abc", "abc", 2) == 0);
-assert(ft_strncmp("ac", "ab", 2) > 0);
-assert(ft_strncmp("aa", "ab", 2) < 0);
-printf("OK ft_strncmp\n");
-return (0);
 }

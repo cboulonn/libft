@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/02/25 14:36:49 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/02/25 14:37:13 by cboulonn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <assert.h>
 
 char	*ft_strcpy(char *dst, const char *src)
 {
@@ -14,15 +24,4 @@ char	*ft_strcpy(char *dst, const char *src)
 	}
 	dst[compt] = src[compt];
 	return (dst);
-}
-
-int		main(void)
-{
-	char s[100];
-
-	bzero(s, 100);
-	ft_strcpy(s, "abc");
-	assert(strcmp(s, "abc") == 0);
-	printf("OK ft_strcpy\n");
-	return (0);
 }

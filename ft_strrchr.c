@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:32:33 by cboulonn          #+#    #+#             */
-/*   Updated: 2015/11/27 15:43:22 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:59:32 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ char	*ft_strrchr(const char *s, int c)
 	if (s[i] == (char)c)
 		return ((char *)&s[i]);
 	return (NULL);
-
 }

@@ -6,13 +6,13 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 23:19:30 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:43:09 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:13:02 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isalnum(int c)
+int		ft_isalnum(int c)
 {
 	while (c != '\0')
 	{

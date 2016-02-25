@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 19:22:20 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:56:31 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/25 14:31:19 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	str = (unsigned char *)b;
 	if (len == 0)
-		return(str);
+		return (str);
 	while (len > 0)
 	{
 		len--;
-		*str = (unsigned char *)c; 
+		*str = c;
 	}
 	return (str);
-
-
 }

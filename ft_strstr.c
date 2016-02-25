@@ -1,7 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/02/25 15:06:50 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/02/25 15:06:55 by cboulonn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <assert.h>
 
 char	*ft_strstr(const char *big, const char *little)
 {
@@ -28,12 +37,4 @@ char	*ft_strstr(const char *big, const char *little)
 		instr++;
 	}
 	return (NULL);
-}
-
-int		main(void)
-{
-	assert(strcmp(ft_strstr("abc.", "b"), "bc.") == 0);
-	assert(strcmp(ft_strstr("aaab.", "aab"), "aab.") == 0);
-	printf("ft_strstr OK!\n");
-	return (0);
 }
