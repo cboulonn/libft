@@ -6,7 +6,7 @@
 #    By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:27:47 by cboulonn          #+#    #+#              #
-#    Updated: 2016/02/23 13:27:50 by cboulonn         ###   ########.fr        #
+#    Updated: 2016/02/27 11:02:29 by cboulonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRC_PATH = ./
@@ -28,7 +28,7 @@ SRC_NAME = ft_atoi.c \
 		   ft_memmove.c \
 		   ft_memset.c \
 		   ft_putchar.c \
-		   ft_putchar_fd \
+		   ft_putchar_fd.c  \
 		   ft_putendl.c \
 		   ft_putendl_fd.c \
 		   ft_putnbr.c \
@@ -83,14 +83,10 @@ $(NAME):	$(OBJ)
 			ranlib $(NAME)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@mkdir $(OBJ_PATH) 2> /dev/null
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	$(CC) $(CFLAGS) -I./ -o $@ -c $<
 
 clean:
 	rm -fv $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
 
 fclean: clean
 	rm -fv $(NAME)

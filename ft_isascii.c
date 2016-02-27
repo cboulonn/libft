@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 23:28:55 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:22:57 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/27 11:41:30 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	while (c != '\0')
-	{
-		if (c >= 0 && c <= 127)
-			return (c);
-		else
-			return (0);
-	}
-	return (c);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 16:56:10 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/26 16:04:12 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/27 11:37:46 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,17 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	j = 0;
+	scpy = NULL;
 	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
 		i++;
 	j = i;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 		j++;
 	}
 	while (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-	{	
+	{
 		i--;
 		j--;
 	}
