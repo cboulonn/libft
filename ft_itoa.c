@@ -22,7 +22,7 @@ int		ft_nblen(int n)
 		n = -n;
 		i++;
 	}
-	if (n > 0)
+	while (n > 0)
 	{
 		n = n / 10;
 		i++;
@@ -37,19 +37,17 @@ char	*ft_itoa(int n)
 
 	i = ft_nblen(n);
 	value = NULL;
-	value = ft_strnew(i);
-	if (value != NULL)
+	if ((value = ft_strnew(i)))
 	{
 		if (n < 0)
 		{
 			n = -n;
 			value[0] = '-';
 		}
-		while (i >= 0 && i <= 9)
+		while (i >= 0 && value[--i] != '-')
 		{
-			value[i] = (n % 10) + '0';
+			value[i] = n % 10 + '0';
 			n = n / 10;
-			i++;
 		}
 	}
 	return (value);

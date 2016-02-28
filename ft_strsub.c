@@ -22,7 +22,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		tron = ft_strnew(len);
 		if (tron != NULL)
 		{
-			tron = ft_strncpy((char *)s, s + start, len);
+			tron = ft_strncpy(tron, s + start, len);
 		}
 	}
 	return (tron);
