@@ -11,8 +11,16 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strtrim(char const *s)
+static char		*ft_ret(char *scpy)
+{
+	if (scpy == NULL)
+		return (ft_strdup(""));
+	return (scpy);
+}
+
+char			*ft_strtrim(char const *s)
 {
 	char	*scpy;
 	int		i;
@@ -20,23 +28,23 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	j = 0;
-	scpy = NULL;
-	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
 	while (s[i] != '\0')
 	{
 		i++;
 		j++;
 	}
-	while (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+	i--;
+	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && i != 0)
 	{
 		i--;
 		j--;
 	}
 	i = 0;
-	scpy = ft_strnew(j);
-	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	ft_strncpy((char *)(s + i), scpy, j);
-	return (scpy);
+	if ((scpy = ft_strnew(j)))
+		ft_strncpy(scpy, (char *)(s + i), j);
+	return (ft_ret(scpy));
 }

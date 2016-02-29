@@ -65,5 +65,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	**ft_strsplit(char const *s, char c);
 int		ft_toupper(int c);
+char	*ft_strtrim(char const *s);
 
 #endif

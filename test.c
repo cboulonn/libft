@@ -15,5 +15,5 @@
 
 int		main(void)
 {
-	ft_strtrim("      abcedf      abcedf       ");
+	printf("%s", ft_strtrim("            "));
 }
