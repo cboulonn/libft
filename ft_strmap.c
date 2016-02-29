@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/31 16:35:11 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:51:08 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:08:17 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	length = ft_strlen(s);
-	str2 = (char*)malloc(sizeof(char) * length + 1);
+	str2 = ft_strnew(length);
 	if (str2 != NULL)
 	{
 		while (i < length)

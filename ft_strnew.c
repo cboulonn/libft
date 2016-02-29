@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 14:57:00 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/27 11:31:48 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:07:00 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ char	*ft_strnew(size_t size)
 
 	p = NULL;
 	if ((p = (char *)malloc(sizeof(char) * (size + 1))))
-		ft_bzero(p, size);
+		ft_bzero(p, size + 1);
 	return (p);
 }

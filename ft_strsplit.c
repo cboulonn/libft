@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 16:14:25 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 16:52:46 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:22:27 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,9 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	if (s[i - 1] == c)
 		len_s--;
-	tab = (char**)malloc(sizeof(s) * (len_s + 2));
-	ft_suite(tab, s, c);
-	tab[len_s + 1] = NULL;
+	if ((tab = (char**)malloc(sizeof(s) * (len_s + 2))))
+		ft_suite(tab, s, c);
+	if (tab)
+		tab[len_s + 1] = NULL;
 	return (tab);
 }

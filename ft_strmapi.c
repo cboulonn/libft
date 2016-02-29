@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 15:37:25 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:56:30 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:05:58 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	length = ft_strlen(s);
 	str2 = ft_strnew(length);
-	if (str2)
+	if (f && s && str2)
 	{
 		while (s[i] != '\0')
 		{

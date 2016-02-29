@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/21 19:13:22 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:24:57 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:11:28 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 int		ft_isprint(int c)
 {
-	while (c != '\0')
-	{
-		if (c >= ' ' && c <= '~')
-			return (c);
-		else
-			return (0);
-	}
-	return (c);
+	if (c >= ' ' && c <= '~')
+		return (1);
+	else
+		return (0);
 }

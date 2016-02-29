@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/25 14:37:18 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/29 11:18:40 by cboulonn         ###   ########.fr       */
+/*   Created: 2016/02/29 10:40:46 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/02/29 11:37:27 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int		main(void)
 {
-	char	*copie;
-	int		i;
-
-	i = 0;
-	if ((copie = (char*)malloc(sizeof(*s1) * (ft_strlen(s1) + 1))))
-	{
-		while (s1[i] != '\0')
-		{
-			copie[i] = s1[i];
-			i++;
-		}
-		copie[i] = '\0';
-	}
-	return (copie);
+	ft_strtrim("      abcedf      abcedf       ");
 }

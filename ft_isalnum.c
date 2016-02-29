@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 23:19:30 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:13:02 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:10:12 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 int		ft_isalnum(int c)
 {
-	while (c != '\0')
-	{
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
 			(c >= '0' && c <= '9'))
-			return (c);
-		else
-			return (0);
-	}
-	return (c);
+		return (1);
+	else
+		return (0);
 }

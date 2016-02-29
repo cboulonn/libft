@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/21 18:33:50 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/23 13:44:00 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:10:23 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 int	ft_isalpha(int c)
 {
-	while (c != '\0')
-	{
-		if (c >= 'a' && c <= 'z')
-			return (c);
-		if (c >= 'A' && c <= 'Z')
-			return (c);
-		else
-			return (0);
-	}
-	return (c);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }

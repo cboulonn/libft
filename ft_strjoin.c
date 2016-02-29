@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 15:57:37 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 14:45:13 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 11:19:57 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ char		*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
-	ft_strcpy(str, s1);
-	ft_strcpy(str + len_s1, s2);
+	if ((str = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1))))
+	{
+		ft_strcpy(str, s1);
+		ft_strcpy(str + len_s1, s2);
+	}
 	return (str);
 }

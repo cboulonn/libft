@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 14:29:33 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/25 15:23:50 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/02/29 10:51:33 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ char	*ft_itoa(int n)
 
 	i = ft_nblen(n);
 	value = NULL;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	if ((value = ft_strnew(i)))
 	{
 		if (n < 0)
