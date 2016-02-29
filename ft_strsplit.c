@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_suite(char **tab, char const *s, char c)
+static void		ft_suite(char **tab, char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -39,7 +39,7 @@ void	ft_suite(char **tab, char const *s, char c)
 	}
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;
