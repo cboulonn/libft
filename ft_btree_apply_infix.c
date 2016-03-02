@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   btree_apply_infix.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cboulonn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/02 11:40:13 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/03/02 13:12:40 by cboulonn         ###   ########.fr       */
+/*   Created: 2015/07/25 22:27:16 by cboulonn          #+#    #+#             */
+/*   Updated: 2016/03/02 13:31:51 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *))
 {
-
-
+	if (root)
+	{
+		if (root->left)
+		{
+			ft_btree_apply_infix(root->left, applyf);
+		}
+		applyf(root->item);
+		if (root->right)
+		{
+			ft_btree_apply_infix(root->right, applyf);
+		}
+	}
 }
-

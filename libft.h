@@ -6,7 +6,7 @@
 /*   By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 13:50:06 by cboulonn          #+#    #+#             */
-/*   Updated: 2016/02/29 11:37:56 by cboulonn         ###   ########.fr       */
+/*   Updated: 2016/03/02 13:39:00 by cboulonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct			s_list
 	size_t				content_size;
 	struct s_list		*next;
 }						t_list;
+
+typedef struct			s_btree
+{
+	struct s_btree		*left;
+	struct s_btree		*right;
+	void				*item;
+}						t_btree;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -73,4 +80,20 @@ int		ft_toupper(int c);
 char	*ft_strtrim(char const *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_insert_data(t_btree **root, void *item,
+		int (*cmpf)(void *, void *));
+int		ft_btree_level_count(t_btree *root);
+void	*ft_btree_search_item(t_btree *root, void *data_ref,
+		int (*cmp)(void *, void *));
+t_btree	*ft_btree_create_node(void *item);
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list	*ft_lstnew(void const *content, size_t content_size);
+
 #endif

@@ -6,7 +6,7 @@
 #    By: cboulonn <cboulonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:27:47 by cboulonn          #+#    #+#              #
-#    Updated: 2016/02/27 11:02:29 by cboulonn         ###   ########.fr        #
+#    Updated: 2016/03/02 13:40:46 by cboulonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRC_PATH = ./
@@ -62,7 +62,20 @@ SRC_NAME = ft_atoi.c \
 		   ft_strsub.c \
 		   ft_strtrim.c \
 		   ft_tolower.c \
-		   ft_toupper.c
+		   ft_toupper.c \
+		   ft_btree_level_count.c \
+		   ft_btree_apply_infix.c \
+		   ft_btree_apply_prefix.c \
+		   ft_btree_apply_suffix.c \
+		   ft_btree_insert_data.c \
+		   ft_btree_search_item.c \
+		   ft_btree_create_node.c \
+		   ft_lstadd.c \
+		   ft_lstdel.c \
+		   ft_lstdelone.c \
+		   ft_lstiter.c \
+		   ft_lstmap.c \
+		   ft_lstnew.c
 
 OBJ_PATH = ./
 
