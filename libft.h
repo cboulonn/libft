@@ -15,6 +15,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct			s_list
+{
+	void				*content;
+	size_t				content_size;
+	struct s_list		*next;
+}						t_list;
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalpha(int c);
@@ -64,5 +71,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	**ft_strsplit(char const *s, char c);
 int		ft_toupper(int c);
 char	*ft_strtrim(char const *s);
-
+char	*ft_strchr(const char *s, int c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
